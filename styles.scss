@@ -1,0 +1,296 @@
+$red: #D13533;
+$blue: #22CAC0;
+$yellow: #FFBD47;
+$dark-grey: #777777;
+$light-grey: #D5D5D3;
+$light-grey-text: #ACACAC;
+
+$bold: 600;
+$eleven: 11px;
+$ubuntu: 'Ubuntu', sans-serif;
+$open-sans: 'Open Sans', sans-serif;
+
+.icon-alingment {
+  position: relative;
+  top: 2px;
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius:    $radius;
+  -ms-border-radius:     $radius;
+  border-radius:         $radius;
+}
+  
+body {
+  margin: 0;
+  min-width: 750px;
+  font-family: $open-sans;
+  background: #B5C6CF;
+  }
+
+* {
+  box-sizing: border-box;
+}
+ 
+
+.container{
+  margin-top: 2%;
+  margin-bottom: 2%;
+  padding: 25px;
+  width: 799px;
+  height: 838px;
+  max-width: none !important;
+  background: white;
+  box-shadow: 1px 0px 1px $dark-grey;
+  }
+
+.col-xs-12 {
+  padding: 0;
+}
+  
+
+.reservation{
+  display: inline;
+  border: 1px solid black;
+  
+  h2 {
+    color: $red;
+    display: inline;
+    font-size: 20px;
+    font-family: $ubuntu;
+  }
+
+  span{
+    display: inline;
+    white-space: nowrap;
+
+    i {
+      padding: 0 5px;
+      color: $dark-grey;
+       }
+   } 
+
+  div {
+    display: inline;
+   }
+} 
+    
+.warnings {
+  color: white;
+  @include border-radius(3px);
+  font-size: 9px;
+}  
+  
+  
+.red {
+  background: $red;
+  margin-right: 5px;
+  padding: 4px 14px;
+}
+  
+.yellow {
+  background: $yellow;
+  padding: 4px 15px;
+} 
+  
+h4 {
+  margin: -13px 0 35px;
+  font-size: 14px;
+  font-family: $open-sans;
+  color: $dark-grey;
+}
+
+.tools {
+  padding: 0;
+  list-style: none;
+ 
+  li {
+    display: inline;
+    padding: 12px 18px;
+    border: 1px solid $light-grey;
+    @include border-radius(3px);
+    margin-right: 9px;
+    font-size: $eleven;
+    font-family: $ubuntu;
+    color: $dark-grey;
+    }
+
+  i {
+    font-size: 18px;
+    color: $dark-grey;
+    padding-right: 5px;
+    @extend .icon-alingment;
+    }
+}   
+    
+.right {
+  text-align: right;
+}
+  
+  
+.entrada-salida{
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: 40px;
+  
+  .border-right{
+    border-right: 1px solid $light-grey;
+    }
+
+  .border-left{
+    border-left: 1px solid $light-grey;
+    }
+
+  .col-xs-2 {
+    padding: 0;
+    padding-top: 0px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    
+    
+    span{
+      font-size: $eleven;
+    }
+    
+    h3{
+      margin: 0;
+      font-size: 18px;
+      white-space: nowrap;
+      position: relative;
+    }
+
+    .right-side-day {
+      font-size: 10px;
+      position: absolute;
+      top: -3px;
+      left: 10px;
+      
+      .right-side-year{
+        position: absolute;
+        margin-top: -5px;
+        }
+      }
+    }
+
+  .col-xs-4 {
+    margin-right: -4px;
+    padding-top: 0;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    
+    
+    span {
+      font-size: $eleven;
+      margin-right: 40px;
+      }     
+    h3 {
+      margin: 0;
+      font-size: 18px;
+      white-space: nowrap;
+      position: relative;
+      }
+   }  
+}   
+      
+.mensaje-puntos {
+  color: $blue;
+  font-size: $eleven;
+  margin-bottom: 40px;
+  margin-top: -23px;
+  i {
+    font-size: 20px;
+    padding: 0 5px 0px 10px;
+    position: relative;
+    top: 2px;
+    @extend .icon-alingment;
+    }
+}    
+
+section{
+  .main-left-column{
+    padding-left: 5px;
+    padding-right: 37px;
+    }
+
+  .main-right-column{
+    padding: 25px;
+    margin-left: -5px;
+    }
+
+  .border{
+    border: 1px solid $light-grey;
+    @include border-radius(3px);
+    }
+
+  h1 {
+    margin: 0;
+    }
+
+  .heading{
+    font-size: 12px;
+    color: $light-grey-text;
+    font-family: $ubuntu;
+    }
+
+  .sub-text{
+    font-size: 13px;
+    color: black;
+    margin-top: -7px;
+    margin-bottom: 25px;
+    }
+}
+    
+img {
+  max-width: 70%;
+  @include border-radius(100%);
+}   
+
+.guest-name{
+  color: $red;
+  font-size: 15px;
+  margin-top: 0;
+  margin-left: -35px;
+}
+
+.guest-title{
+  color: $red;
+  font-size: 9px;
+  margin-left: -35px;
+  margin-top: -5px;
+}  
+  
+.contact-info {
+  p:nth-child(2){
+    font-size: 13px;
+    margin-top: -10px;
+  }
+
+  p:nth-child(3) {
+    color: $blue;
+    border-bottom: 1px solid;
+    border-bottom-style: dotted;
+    width: 85px;
+    font-size: $eleven;
+    margin-top: -5px;
+    margin-bottom: 25px;
+    }
+}
+
+.tag-list{
+  list-style: none;
+  padding-left: 0;
+
+  li {
+    float: left;
+    font-size: $eleven;
+    padding: 5px 10px;
+    background: $dark-grey;
+    border-radius: 3px;
+    color: white;
+    margin-right: 10px;
+    }
+}    
+.margin-bottom {
+  margin-bottom: 30px;
+}
